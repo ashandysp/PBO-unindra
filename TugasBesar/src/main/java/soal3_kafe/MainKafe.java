@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package soal3_kafe;
+import java.util.Scanner;
 
 /**
  *
@@ -10,13 +11,16 @@ package soal3_kafe;
  */
 public class MainKafe {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
         Menu menu1 = new Menu("M01", "Nasi Goreng", 18000, "Makanan");
-        int jumlah = 2;
-        
         menu1.tampilMenu();
-        System.out.println("Jumlah  : " + jumlah);
+        
+        
+        System.out.print("Masukkan jumlah pesanan : ");
+        int jumlah = input.nextInt();
         System.out.println("Total   : " + menu1.hitungHarga(jumlah));
         System.out.println("------------------------------");
+        input.close();
         
         // contoh constructor tanpa parameter (overloading)
         Menu menuKosong = new Menu();
